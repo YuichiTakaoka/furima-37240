@@ -131,13 +131,13 @@
                     <mxGeometry y="30" width="380" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="98" value="address" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="-1190" width="370" height="260" as="geometry"/>
+                    <mxGeometry x="360" y="-1190" width="370" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="99" value="postal_cord                      string                     null: false" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="98">
                     <mxGeometry y="30" width="370" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="100" value="prefecture_id                  integer                   null: false&#10;&#10;city                                   string                   null: false&#10; &#10;lot_number.                      string                   null: false&#10;&#10;building                            string                   &#10;&#10;pone_number                  string                      null: false&#10;&#10;buy_information            refarences         null: false, foreign_key: true" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="98">
-                    <mxGeometry y="60" width="370" height="200" as="geometry"/>
+                <mxCell id="100" value="prefecture_id                  integer                   null: false&#10;&#10;city                                   string                   null: false&#10; &#10;lot_number.                      string                   null: false&#10;&#10;building                            string                   &#10;&#10;pone_number                  string                      null: false" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="98">
+                    <mxGeometry y="60" width="370" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="108" value="&lt;span style=&quot;text-align: left&quot;&gt;category_id&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="1110" y="-1673" width="100" height="100" as="geometry"/>
