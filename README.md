@@ -3,13 +3,13 @@
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
 | nickname           | string     | null: false                    |
-| email              | string     | null: false                    |
+| email              | string     | null: false, unique: true      |
 | encrypted_password | string     | null: false                    |
 | last_name          | string     | null: false                    |
 | first_name         | string     | null: false                    |
 | last_name_kana     | string     | null: false                    |
 | first_name_kana    | string     | null: false                    |
-| birthday_year      | date       | null: false, foreign_key: true |
+| birthday_year      | date       | null: false                    |
 
 ### Association
 has_many: items
@@ -21,9 +21,9 @@ has_many: orders
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
-| price              | string     | null: false                    |
+| price              | integer    | null: false                    |
 | item_name          | string     | null: false                    |
-| user               | referrences| null: false, foreign_key: true |
+| user               | references | null: false, foreign_key: true |
 | category_id        | integer    | null: false                    |
 | condition_id       | integer    | null: false                    |
 | delivary_fee_id    | integer    | null: false                    |
@@ -33,11 +33,6 @@ has_many: orders
 ### Association
 
 belongs_to: user
-belongs_to: category_id 
-belongs_to: condition_id
-belongs_to: delivary_fee_id
-belongs_to: prefecture_id
-belongs_to: derivary_day_id
 
 has_one: order
 
@@ -53,7 +48,6 @@ has_one: order
 belongs_to: user
 berongs_to: item
 
-has_one: prefecture_id
 
 
 ##　addressテーブル
@@ -66,12 +60,10 @@ has_one: prefecture_id
 | lot_number         | string     | null: false                    |
 | building           | string     |                                |
 | phone_number       | string     | null: false                    |
-| buy_record         | references | null: false, foreign_key: true |
+
 
 ### Association
 
 belongs_to: order
-
-has_one: prefecture_id
 
 
