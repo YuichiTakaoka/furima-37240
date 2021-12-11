@@ -17,7 +17,7 @@ has_many: orders
 
 
 
-## itemテーブル
+## itemsテーブル
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
@@ -38,13 +38,12 @@ belongs_to: user
 has_one: order
 
 
-## order　テーブル
+## ordersテーブル
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
 | item               | references | null: false, foreign_key: true |
-| address            | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -56,7 +55,7 @@ has_one: address
 
 
 
-##　addressテーブル
+##　addressesテーブル
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
