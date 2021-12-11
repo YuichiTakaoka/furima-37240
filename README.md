@@ -21,8 +21,8 @@ has_many: orders
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
-| item_name          | string     | null: false                    |
-| item_concept       | text       | null: false                    |
+| name               | string     | null: false                    |
+| concept            | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | condition_id       | integer    | null: false                    |
 | delivary_fee_id    | integer    | null: false                    |
@@ -50,7 +50,7 @@ has_one: order
 
 belongs_to: user
 belongs_to: item
-belongs_to: address
+has_one: address
 
 
 
