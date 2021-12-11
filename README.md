@@ -21,14 +21,15 @@ has_many: orders
 
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
-| price              | integer    | null: false                    |
 | item_name          | string     | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| item_concept       | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | condition_id       | integer    | null: false                    |
 | delivary_fee_id    | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
 | derivary_day_id    | integer    | null: false                    |
+| price              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -38,15 +39,20 @@ has_one: order
 
 
 ## order　テーブル
+
 | Column             | Type       | Options                        |
 | -------------------| ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
-| item               | references| null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
+| address            | references | null: false, foreign_key: true |
 
 ### Association
 
 belongs_to: user
-berongs_to: item
+belongs_to: item
+belongs_to: address
+
+
 
 
 
@@ -60,6 +66,7 @@ berongs_to: item
 | lot_number         | string     | null: false                    |
 | building           | string     |                                |
 | phone_number       | string     | null: false                    |
+| order              | references | null: false, foreign_key: true |
 
 
 ### Association
