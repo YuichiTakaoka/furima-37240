@@ -1,14 +1,14 @@
 class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  def index
+  #def index
 
-  end
+  #end
 
-  def show
-  end
+  #def show
+  #end
 
-  def create
-  end
+  #def create
+  #end
 
   private
   def move_to_index
