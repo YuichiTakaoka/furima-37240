@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
   private
 
   def set_item
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:id].to_i)
   end
 
   def orderaddress_params
