@@ -54,10 +54,25 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number input only number")
       end
-      it '電話番号が10字か11字でないと保存できないこと' do
+      it '電話番号が9桁以下だと登録できないこと' do
         @order_address.phone_number = '0011'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number input number 10~11")
+        expect(@order_address.errors.full_messages).to include("Phone number input number 10")
+      end
+      it '電話番号が12桁以上だと登録できないこと' do
+        @order_address.phone_number = '0000111122223333'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Phone number input number 10")
+      end
+      it 'userが紐付いていなければ出品できない' do
+        @order_address.user_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("User can't be blank")
+      end
+      it 'itemが紐付いていなければ出品できない' do
+        @order_address.item_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Item can't be blank")
       end
       it 'クレジット情報を入力していないと保存できないこと' do
         @order_address.token = nil
