@@ -11,6 +11,9 @@
 | first_name_kana    | string     | null: false                    |
 | birthday_year      | date       | null: false                    |
 
+### Association
+has_many: items
+has_many: orders
 
 
 ## itemsテーブル
@@ -26,6 +29,9 @@
 | derivary_day_id    | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
+
+
+### Association
 
 belongs_to: user
 
