@@ -2,7 +2,7 @@ AllCops:
 # 除外するディレクトリ（自動生成されたファイル）
 # デフォルト設定にある"vendor/**/*"が無効化されないように記述
  Exclude:
-   - "vendor/**/*" # rubocop config/default.yml
+   - "vendor/**/*" # cop config/default.yml
    - "db/**/*"
    - "config/**/*"
    - "bin/*"
@@ -28,11 +28,11 @@ Metrics/BlockLength:
 # Assignment: 変数への代入
 # Branch: メソッド呼び出し
 # Condition: 条件文
-# 上記項目をRubocopが計算して基準値を超えると警告を出す（上記頭文字をとって'Abc'）
+# 上記項目をcopが計算して基準値を超えると警告を出す（上記頭文字をとって'Abc'）
 Metrics/AbcSize:
  Max: 50
 
-# メソッドの中身が複雑になっていないか、Rubocopが計算して基準値を超えると警告を出す
+# メソッドの中身が複雑になっていないか、copが計算して基準値を超えると警告を出す
 Metrics/PerceivedComplexity:
  Max: 8
 
